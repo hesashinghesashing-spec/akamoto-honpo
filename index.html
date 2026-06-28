@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あかもと本舗｜川崎市麻生区の新聞販売店（ASA）</title>
+<meta name="description" content="川崎市麻生区・あさお・柿生・新百合丘エリアの新聞販売店。朝刊・夕刊の配達、古紙回収、宅配サービスを3営業所で展開しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:    #C0392B;
+    --red-lt: #FDECEA;
+    --navy:   #1A2A3A;
+    --gray:   #F5F5F3;
+    --gray-2: #E8E8E4;
+    --text:   #222;
+    --muted:  #666;
+    --white:  #fff;
+    --radius: 8px;
+    --max:    1080px;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* ── ヘッダー ── */
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .site-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .site-logo .logo-en {
+    font-size: 10px;
+    letter-spacing: .12em;
+    opacity: .7;
+  }
+  .site-logo .logo-ja {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header-nav a {
+    font-size: 13px;
+    opacity: .85;
+    transition: opacity .15s;
+  }
+  .header-nav a:hover { opacity: 1; }
+  .header-tel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--red);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .header-tel svg { flex-shrink: 0; }
+
+  /* ── ヒーロー ── */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 4rem 1.5rem;
+  }
+  .hero-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .hero-lead {
+    font-size: 14px;
+    opacity: .8;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn--red { background: var(--red); color: var(--white); }
+  .btn--outline { border: 2px solid rgba(255,255,255,.4); color: var(--white); }
+  .hero-visual {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .hero-info-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .hero-info-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--red);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .hero-info-item h3 { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+  .hero-info-item p { font-size: 12px; opacity: .7; }
+
+  /* ── お知らせバナー ── */
+  .notice-bar {
+    background: var(--red-lt);
+    border-left: 4px solid var(--red);
+    padding: 12px 1.5rem;
+  }
+  .notice-bar-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+  }
+  .notice-label {
+    background: var(--red);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .notice-bar-inner a {
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  /* ── セクション共通 ── */
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  .section--gray { background: var(--gray); }
+  .section-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .section-head {
+    margin-bottom: 2.5rem;
+  }
+  .section-head .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+  .section-head h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .section-head p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: .5rem;
+  }
+
+  /* ── サービス3カード ── */
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    border-top: 3px solid var(--red);
+  }
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--red-lt);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .service-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  .service-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* ── 古紙回収バナー ── */
+  .recycle-banner {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .recycle-banner-left { display: flex; align-items: center; gap: 1rem; }
+  .recycle-tag {
+    background: var(--red);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .recycle-banner h3 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+  .recycle-banner p { font-size: 12px; opacity: .7; }
+  .btn--white {
+    background: var(--white);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    white-space: nowrap;
+    display: inline-block;
+    transition: opacity .15s;
+  }
+  .btn--white:hover { opacity: .85; }
+
+  /* ── 営業所一覧 ── */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .shop-card {
+    background: var(--white);
+    border: 1px solid var(--gray-2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .shop-card-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem 1.25rem;
+  }
+  .shop-card-head .shop-name-en {
+    font-size: 11px;
+    opacity: .6;
+    letter-spacing: .1em;
+  }
+  .shop-card-head h3 { font-size: 17px; font-weight: 700; }
+  .shop-card-body { padding: 1.25rem; }
+  .shop-info-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 13px;
+  }
+  .shop-info-row:last-child { border-bottom: none; }
+  .shop-info-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    min-width: 54px;
+    padding-top: 1px;
+  }
+  .shop-info-row a {
+    color: var(--red);
+    font-weight: 700;
+  }
+  .shop-map-link {
+    display: block;
+    text-align: center;
+    background: var(--gray);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px;
+    border-top: 1px solid var(--gray-2);
+    transition: background .15s;
+  }
+  .shop-map-link:hover { background: var(--gray-2); }
+
+  /* ── 採用バナー ── */
+  .recruit-section {
+    background: linear-gradient(135deg, #1A2A3A 0%, #2C3E50 100%);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .recruit-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .recruit-tag {
+    background: rgba(255,255,255,.15);
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+  .recruit-section h2 {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  .recruit-section p {
+    font-size: 13px;
+    opacity: .75;
+  }
+
+  /* ── お知らせ一覧 ── */
+  .news-list { list-style: none; }
+  .news-item {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-2);
+    font-size: 14px;
+  }
+  .news-date {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+    min-width: 90px;
+  }
+  .news-cat {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .news-cat--recycle { background: #E8F5E9; color: #2E7D32; }
+  .news-cat--recruit { background: #FFF3E0; color: #E65100; }
+  .news-cat--info    { background: #E3F2FD; color: #1565C0; }
+  .news-item a:hover { text-decoration: underline; }
+
+  /* ── フッター ── */
+  .site-footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 1.5rem;
+  }
+  .footer-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    opacity: .5;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: .5rem; }
+  .footer-col ul a { font-size: 13px; opacity: .75; transition: opacity .15s; }
+  .footer-col ul a:hover { opacity: 1; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    opacity: .5;
+  }
+
+  /* ── フローティングCTA（スマホ） ── */
+  .floating-cta {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 200;
+    gap: 8px;
+  }
+  .floating-cta a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  }
+  .floating-cta .f-tel { background: var(--red); color: var(--white); }
+  .floating-cta .f-map { background: var(--navy); color: var(--white); }
+
+  /* ── レスポンシブ ── */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .service-grid { grid-template-columns: 1fr; }
+    .shop-grid { grid-template-columns: 1fr; }
+    .recruit-section { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+    .header-nav { display: none; }
+    .recycle-banner { flex-direction: column; align-items: flex-start; }
+    .floating-cta { display: flex; }
+  }
+
+  @media (max-width: 960px) {
+    .service-grid { grid-template-columns: 1fr 1fr; }
+    .shop-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-en">ASA AKAMOTO HONPO</span>
+      <span class="logo-ja">あかもと本舗</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#services">サービス</a>
+      <a href="#shops">営業所一覧</a>
+      <a href="#news">お知らせ</a>
+      <a href="#recruit">採用情報</a>
+    </nav>
+    <a href="tel:044-000-0000" class="header-tel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .91h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      044-000-0000（本部）
+    </a>
+  </div>
+</header>
+
+<!-- お知らせバナー -->
+<div class="notice-bar">
+  <div class="notice-bar-inner">
+    <span class="notice-label">お知らせ</span>
+    <span>2026年7月の古紙回収スケジュールを公開しました</span>
+    <a href="#">今月のスケジュールを見る →</a>
+  </div>
+</div>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-eyebrow">川崎市麻生区の新聞販売店（ASA）</span>
+      <h1>地域の毎朝を、<br>あかもと本舗が届けます。</h1>
+      <p class="hero-lead">
+        麻生区・あさお・柿生・新百合丘エリアで、新聞配達・古紙回収・宅配サービスを3つの営業所で展開しています。配達の一時止めや購読に関するご相談は、各営業所まで直接お問い合わせください。
+      </p>
+      <div class="hero-cta">
+        <a href="#shops" class="btn btn--red">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          担当営業所を探す
+        </a>
+        <a href="#recruit" class="btn btn--outline">スタッフ募集中</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-info-item">
+        <div class="hero-info-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h3>3つの営業所で対応</h3>
+          <p>ASAあさお・ASA柿生・ASA新百合</p>
+        </div>
+      </div>
+      <div class="hero-info-item">
+        <div class="hero-info-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <h3>配達エリア</h3>
+          <p>麻生区全域・一部多摩区</p>
+        </div>
+      </div>
+      <div class="hero-info-item">
+        <div class="hero-info-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .91h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <h3>お問い合わせ</h3>
+          <p>各営業所に直接ご連絡ください</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービス -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>あかもと本舗の3つのサービス</h2>
+      <p>新聞の配達から古紙回収、宅配サービスまで地域の暮らしをサポートします。</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3>新聞配達</h3>
+        <p>朝刊・夕刊を毎日確実にお届けします。配達の一時止め・再開は各営業所へお気軽にご連絡ください。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="♻"/><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </div>
+        <h3>古紙回収</h3>
+        <p>毎月エリアごとにスケジュールを公開しています。新聞・雑誌・段ボールをまとめて回収。雨天でも回収します。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H3l9-9 9 9h-2"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+        </div>
+        <h3>宅配サービス</h3>
+        <p>森永乳業製品など、日用品の定期宅配も承っています。詳しくは各営業所にお問い合わせください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 古紙回収バナー -->
+<section class="section section--gray" id="recycle">
+  <div class="section-inner">
+    <div class="recycle-banner">
+      <div class="recycle-banner-left">
+        <span class="recycle-tag">今月の古紙回収</span>
+        <div>
+          <h3>2026年7月のスケジュールを公開中</h3>
+          <p>エリアごとの回収日程を確認できます。袋はできるだけ詰め込んでください。</p>
+        </div>
+      </div>
+      <a href="#" class="btn--white">スケジュールを見る →</a>
+    </div>
+
+    <!-- お知らせ -->
+    <div class="section-head" id="news">
+      <p class="eyebrow">News</p>
+      <h2>お知らせ</h2>
+    </div>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2026.06.25</span>
+        <span class="news-cat news-cat--recycle">古紙回収</span>
+        <a href="#">2026年7月の古紙回収スケジュール</a>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2026.05.29</span>
+        <span class="news-cat news-cat--recycle">古紙回収</span>
+        <a href="#">6月の古紙回収スケジュール</a>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025.02.26</span>
+        <span class="news-cat news-cat--info">営業所</span>
+        <a href="#">配達エリア・営業所体制の変更について（ご購読者様へ）</a>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2023.07.03</span>
+        <span class="news-cat news-cat--info">宅配</span>
+        <a href="#">森永 絹とうふの宅配を開始しました</a>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2023.06.27</span>
+        <span class="news-cat news-cat--recruit">採用</span>
+        <a href="#">スタッフ募集開始しました（未経験・ミドルシニア大歓迎）</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 営業所一覧 -->
+<section class="section" id="shops">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Our Shops</p>
+      <h2>営業所一覧</h2>
+      <p>担当エリアを確認して、最寄りの営業所にお問い合わせください。</p>
+    </div>
+    <div class="shop-grid">
+      <div class="shop-card">
+        <div class="shop-card-head">
+          <p class="shop-name-en">ASA ASAO</p>
+          <h3>ASAあさお</h3>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-info-row">
+            <span class="shop-info-label">担当エリア</span>
+            <span>麻生区あさお・万福寺・上麻生周辺</span>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">電話</span>
+            <a href="tel:044-000-0001">044-000-0001</a>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">住所</span>
+            <span>川崎市麻生区○○1-1-1</span>
+          </div>
+        </div>
+        <a href="#" class="shop-map-link">📍 地図を見る</a>
+      </div>
+      <div class="shop-card">
+        <div class="shop-card-head">
+          <p class="shop-name-en">ASA KAKIO</p>
+          <h3>ASA柿生</h3>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-info-row">
+            <span class="shop-info-label">担当エリア</span>
+            <span>麻生区柿生・岡上・栗木周辺</span>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">電話</span>
+            <a href="tel:044-000-0002">044-000-0002</a>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">住所</span>
+            <span>川崎市麻生区○○2-2-2</span>
+          </div>
+        </div>
+        <a href="#" class="shop-map-link">📍 地図を見る</a>
+      </div>
+      <div class="shop-card">
+        <div class="shop-card-head">
+          <p class="shop-name-en">ASA SHINYURI</p>
+          <h3>ASA新百合</h3>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-info-row">
+            <span class="shop-info-label">担当エリア</span>
+            <span>麻生区新百合ヶ丘・百合丘・王禅寺周辺</span>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">電話</span>
+            <a href="tel:044-000-0003">044-000-0003</a>
+          </div>
+          <div class="shop-info-row">
+            <span class="shop-info-label">住所</span>
+            <span>川崎市麻生区○○3-3-3</span>
+          </div>
+        </div>
+        <a href="#" class="shop-map-link">📍 地図を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 採用 -->
+<section class="section section--gray" id="recruit">
+  <div class="section-inner">
+    <div class="recruit-section">
+      <div>
+        <div class="recruit-tags">
+          <span class="recruit-tag">未経験歓迎</span>
+          <span class="recruit-tag">ミドルシニア活躍中</span>
+          <span class="recruit-tag">短時間OK</span>
+          <span class="recruit-tag">原付免許必須</span>
+        </div>
+        <h2>一緒に地域を支えるスタッフを募集しています</h2>
+        <p>20代〜60代まで幅広い年代が活躍中。定年後のお小遣い稼ぎや、短時間で働きたい方も歓迎です。学歴・経験は問いません。</p>
+      </div>
+      <a href="#" class="btn btn--red" style="white-space: nowrap;">採用情報を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="site-logo" style="margin-bottom: 1rem;">
+          <span class="logo-en" style="font-size:10px; opacity:.5; letter-spacing:.12em;">ASA AKAMOTO HONPO</span>
+          <span class="logo-ja" style="font-size:18px; font-weight:700;">あかもと本舗</span>
+        </div>
+        <p style="font-size:12px; opacity:.5; line-height:1.8;">川崎市麻生区の新聞販売店（ASA）<br>地域と共に。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="#">新聞配達</a></li>
+          <li><a href="#">古紙回収</a></li>
+          <li><a href="#">宅配サービス</a></li>
+          <li><a href="#">ぽいんと倶楽部</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>会社情報</h4>
+        <ul>
+          <li><a href="#">営業所一覧</a></li>
+          <li><a href="#">会社案内</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">インボイス制度について</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2023 あかもと本舗</span>
+      <span>川崎市麻生区</span>
+    </div>
+  </div>
+</footer>
+
+<!-- フローティングCTA（スマホ用） -->
+<div class="floating-cta">
+  <a href="tel:044-000-0000" class="f-tel">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .91h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    電話する
+  </a>
+  <a href="#shops" class="f-map">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    営業所を探す
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用情報｜あかもと本舗（川崎市麻生区）</title>
+<meta name="description" content="あかもと本舗のスタッフ募集。未経験・ミドルシニア大歓迎。20代〜60代まで幅広い年代が活躍中。短時間OK・原付免許必須。川崎市麻生区の新聞配達スタッフを募集しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:    #C0392B;
+    --red-lt: #FDECEA;
+    --navy:   #1A2A3A;
+    --gray:   #F5F5F3;
+    --gray-2: #E8E8E4;
+    --text:   #222;
+    --muted:  #666;
+    --white:  #fff;
+    --radius: 8px;
+    --max:    1080px;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── ヘッダー ── */
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .site-logo { display: flex; flex-direction: column; line-height: 1.2; }
+  .site-logo .logo-en { font-size: 10px; letter-spacing: .12em; opacity: .7; }
+  .site-logo .logo-ja { font-size: 18px; font-weight: 700; }
+  .header-nav { display: flex; align-items: center; gap: 1.5rem; }
+  .header-nav a { font-size: 13px; opacity: .85; transition: opacity .15s; }
+  .header-nav a:hover { opacity: 1; }
+  .header-tel {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--red); color: var(--white);
+    padding: 6px 14px; border-radius: var(--radius);
+    font-size: 13px; font-weight: 700; white-space: nowrap;
+  }
+
+  /* ── パンくず ── */
+  .breadcrumb {
+    background: var(--gray);
+    padding: 10px 1.5rem;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .breadcrumb-inner { max-width: var(--max); margin: 0 auto; }
+  .breadcrumb a { color: var(--red); }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* ── ヒーロー ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #2C4A6A 100%);
+    color: var(--white);
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--red);
+    font-size: 12px; font-weight: 700;
+    letter-spacing: .1em;
+    padding: 4px 14px; border-radius: 4px;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .hero-lead {
+    font-size: 15px; opacity: .8; max-width: 600px; margin: 0 auto 2rem;
+  }
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center; margin-bottom: 2rem;
+  }
+  .hero-tag {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    color: var(--white);
+    font-size: 13px; font-weight: 500;
+    padding: 6px 16px; border-radius: 100px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 14px 32px; border-radius: var(--radius);
+    font-size: 15px; font-weight: 700;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn--red { background: var(--red); color: var(--white); }
+  .btn--outline-white { border: 2px solid rgba(255,255,255,.5); color: var(--white); }
+
+  /* ── セクション共通 ── */
+  .section { padding: 4rem 1.5rem; }
+  .section--gray { background: var(--gray); }
+  .section-inner { max-width: var(--max); margin: 0 auto; }
+  .section-head { margin-bottom: 2.5rem; }
+  .section-head .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: .15em;
+    color: var(--red); text-transform: uppercase; margin-bottom: .5rem;
+  }
+  .section-head h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 600; line-height: 1.4;
+  }
+  .section-head p { font-size: 14px; color: var(--muted); margin-top: .5rem; }
+
+  /* ── 選ばれる理由 ── */
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .reason-card {
+    background: var(--white);
+    border: 1px solid var(--gray-2);
+    border-top: 3px solid var(--red);
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .reason-icon {
+    width: 52px; height: 52px;
+    background: var(--red-lt);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+  .reason-card h3 { font-size: 15px; font-weight: 700; margin-bottom: .5rem; }
+  .reason-card p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+  /* ── 一日の流れ ── */
+  .flow-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .flow-item {
+    display: flex; gap: 1.5rem; align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--gray-2);
+    position: relative;
+  }
+  .flow-item:last-child { border-bottom: none; }
+  .flow-time {
+    min-width: 80px;
+    font-size: 18px; font-weight: 700;
+    color: var(--red);
+    font-family: 'Noto Serif JP', serif;
+    padding-top: 2px;
+  }
+  .flow-content h3 { font-size: 15px; font-weight: 700; margin-bottom: .25rem; }
+  .flow-content p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+  /* ── 募集要項テーブル ── */
+  .job-table { width: 100%; border-collapse: collapse; }
+  .job-table tr { border-bottom: 1px solid var(--gray-2); }
+  .job-table th {
+    width: 160px;
+    background: var(--gray);
+    font-size: 13px; font-weight: 700;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    vertical-align: top;
+    color: var(--navy);
+  }
+  .job-table td {
+    font-size: 14px;
+    padding: 1rem 1.25rem;
+    line-height: 1.8;
+    vertical-align: top;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 4px;
+    margin-right: 4px; margin-bottom: 4px;
+  }
+  .badge--red { background: var(--red-lt); color: var(--red); }
+  .badge--navy { background: #E8EDF2; color: var(--navy); }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-2);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .faq-q {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 1.25rem; cursor: pointer;
+    font-size: 14px; font-weight: 700;
+  }
+  .faq-q-mark {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: var(--red); color: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+  }
+  .faq-a {
+    display: flex; gap: 12px;
+    padding: 0 1.25rem 1.25rem;
+    font-size: 13px; color: var(--muted); line-height: 1.8;
+  }
+  .faq-a-mark {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: var(--navy); color: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+  }
+
+  /* ── 応募CTA ── */
+  .apply-section {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1.5rem;
+  }
+  .apply-section h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    margin-bottom: 1rem;
+  }
+  .apply-section p { font-size: 14px; opacity: .75; margin-bottom: 2rem; }
+  .apply-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── フッター ── */
+  .site-footer { background: var(--navy); color: var(--white); padding: 2rem 1.5rem; }
+  .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; opacity: .5; }
+
+  /* ── フローティングCTA ── */
+  .floating-cta {
+    display: none;
+    position: fixed; bottom: 1rem; left: 1rem; right: 1rem;
+    z-index: 200; gap: 8px;
+  }
+  .floating-cta a {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 14px; border-radius: var(--radius);
+    font-size: 14px; font-weight: 700;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  }
+  .floating-cta .f-tel { background: var(--red); color: var(--white); }
+  .floating-cta .f-apply { background: var(--navy); color: var(--white); }
+
+  /* ── フォーム ── */
+  .form-group { margin-bottom: 1.25rem; }
+  .form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .form-required {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gray-2);
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color .15s;
+    outline: none;
+    appearance: none;
+  }
+  .form-input:focus { border-color: var(--navy); }
+  .form-input::placeholder { color: #bbb; }
+  .form-select { cursor: pointer; }
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.7;
+  }
+  .form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .form-check input { width: 16px; height: 16px; accent-color: var(--red); cursor: pointer; }
+  .form-submit {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .form-submit:hover { opacity: .85; }
+  .form-submit:disabled { opacity: .5; cursor: not-allowed; }
+
+  /* ── レスポンシブ ── */
+  @media (max-width: 768px) {
+    .reason-grid { grid-template-columns: 1fr; }
+    .header-nav { display: none; }
+    .job-table th { width: 100px; }
+    .floating-cta { display: flex; }
+    #apply > .section-inner > div { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 960px) {
+    .reason-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-en">ASA AKAMOTO HONPO</span>
+      <span class="logo-ja">あかもと本舗</span>
+    </a>
+    <nav class="header-nav">
+      <a href="index.html#services">サービス</a>
+      <a href="index.html#shops">営業所一覧</a>
+      <a href="index.html#news">お知らせ</a>
+      <a href="recruit.html" style="color:#fff; font-weight:700;">採用情報</a>
+    </nav>
+    <a href="tel:044-000-0000" class="header-tel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .91h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      044-000-0000（本部）
+    </a>
+  </div>
+</header>
+
+<!-- パンくず -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">ホーム</a>
+    <span>›</span>
+    採用情報
+  </div>
+</div>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <span class="hero-eyebrow">Recruit</span>
+  <h1>地域の朝を支える仕事、<br>一緒にはじめませんか。</h1>
+  <p class="hero-lead">未経験・ミドルシニア大歓迎。20代〜60代まで幅広い年代のスタッフが、川崎市麻生区の街で活躍しています。</p>
+  <div class="hero-tags">
+    <span class="hero-tag">未経験歓迎</span>
+    <span class="hero-tag">ミドルシニア活躍中</span>
+    <span class="hero-tag">短時間OK</span>
+    <span class="hero-tag">20代〜60代</span>
+    <span class="hero-tag">定年後も歓迎</span>
+    <span class="hero-tag">フリーター歓迎</span>
+  </div>
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="#apply" class="btn btn--red">応募する・問い合わせる</a>
+    <a href="#job" class="btn btn--outline-white">募集要項を見る</a>
+  </div>
+</section>
+
+<!-- 選ばれる理由 -->
+<section class="section section--gray">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>あかもと本舗で働く4つの理由</h2>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>午前中に仕事が終わる</h3>
+        <p>配達は早朝〜午前中がメイン。午後は自由な時間として使えます。副業・ダブルワークにも最適です。</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>20代〜60代が一緒に働く職場</h3>
+        <p>年齢を気にせず働ける環境です。定年後の方、育児の合間に働きたい方、フリーターの方も歓迎。</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>体を動かして健康に</h3>
+        <p>毎朝のルーティンワークで自然と体が動きます。「退職後に体を動かしたい」という方に好評です。</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>地元で長く続けられる</h3>
+        <p>担当エリアは自宅の近く。通勤ゼロで地元の街を毎日歩きます。地域のつながりを感じながら働けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 一日の流れ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">A Day's Work</p>
+      <h2>配達スタッフの一日の流れ</h2>
+      <p>早起きが少し苦手でも大丈夫。慣れれば体が自然に動くようになります。</p>
+    </div>
+    <ul class="flow-list">
+      <li class="flow-item">
+        <span class="flow-time">3:00</span>
+        <div class="flow-content">
+          <h3>営業所に到着・新聞の仕分け</h3>
+          <p>その日の新聞を担当エリア別に仕分けします。最初は先輩スタッフが丁寧に教えてくれます。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-time">3:30</span>
+        <div class="flow-content">
+          <h3>配達スタート</h3>
+          <p>原付バイクで担当エリアを回ります。天候にかかわらず毎日同じルートなので、慣れれば迷いません。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-time">6:30</span>
+        <div class="flow-content">
+          <h3>配達完了・営業所に戻る</h3>
+          <p>配達完了後は営業所に戻って終了報告。朝7時頃には仕事が終わることが多いです。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-time">7:00〜</span>
+        <div class="flow-content">
+          <h3>自由時間</h3>
+          <p>午後は自分の時間。買い物・趣味・副業など、自由に過ごせます。</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 募集要項 -->
+<section class="section section--gray" id="job">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Job Description</p>
+      <h2>募集要項</h2>
+    </div>
+    <table class="job-table">
+      <tr>
+        <th>職種</th>
+        <td>新聞配達スタッフ（朝刊・夕刊）</td>
+      </tr>
+      <tr>
+        <th>雇用形態</th>
+        <td>
+          <span class="badge badge--navy">アルバイト</span>
+          <span class="badge badge--navy">パート</span>
+          <span class="badge badge--red">長期歓迎</span>
+        </td>
+      </tr>
+      <tr>
+        <th>勤務時間</th>
+        <td>3:00〜7:00（目安）※エリアによって異なります</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>川崎市麻生区内（ASAあさお・ASA柿生・ASA新百合のいずれか）</td>
+      </tr>
+      <tr>
+        <th>給与</th>
+        <td>詳細はお問い合わせください（経験・勤務日数により応相談）</td>
+      </tr>
+      <tr>
+        <th>必須資格</th>
+        <td>
+          <span class="badge badge--red">原付免許（必須）</span>
+        </td>
+      </tr>
+      <tr>
+        <th>歓迎条件</th>
+        <td>
+          <span class="badge badge--navy">未経験歓迎</span>
+          <span class="badge badge--navy">ミドルシニア歓迎</span>
+          <span class="badge badge--navy">フリーター歓迎</span>
+          <span class="badge badge--navy">定年退職者歓迎</span>
+          <span class="badge badge--navy">学歴・経験不問</span>
+        </td>
+      </tr>
+      <tr>
+        <th>待遇・福利厚生</th>
+        <td>
+          雨天手当あり／制服・バイク貸与／丁寧な研修あり<br>
+          ※詳細は面談時にご説明します
+        </td>
+      </tr>
+      <tr>
+        <th>応募方法</th>
+        <td>下記の「応募する」ボタンからお問い合わせいただくか、各営業所に直接お電話ください。</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- よくある質問 -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="faq-q-mark">Q</span>
+          <span>原付免許を持っていないと応募できませんか？</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-mark">A</span>
+          <span>原付免許は必須となります。ただし、免許取得を支援できる場合もありますので、まずはお気軽にご相談ください。</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="faq-q-mark">Q</span>
+          <span>60代でも応募できますか？</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-mark">A</span>
+          <span>もちろんです。現在も60代のスタッフが元気に活躍しています。年齢を理由に応募をためらわずにご連絡ください。</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="faq-q-mark">Q</span>
+          <span>雨の日や台風の日はどうなりますか？</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-mark">A</span>
+          <span>雨天でも配達は基本的に行います。レインウェアを着用して対応します。台風など荒天の場合は状況に応じて対応します。雨天手当が支給されます。</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="faq-q-mark">Q</span>
+          <span>副業・ダブルワークは可能ですか？</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-mark">A</span>
+          <span>可能です。午前中に仕事が終わるため、午後に別のお仕事をされているスタッフも多数います。</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="faq-q-mark">Q</span>
+          <span>研修はありますか？未経験でも大丈夫ですか？</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-mark">A</span>
+          <span>はい、丁寧な研修があります。最初は先輩スタッフが一緒にまわりますので、未経験の方でも安心してスタートできます。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 応募フォーム -->
+<section class="section" id="apply" style="background: var(--gray);">
+  <div class="section-inner">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+
+      <!-- 左：テキスト＋電話 -->
+      <div>
+        <p class="eyebrow" style="font-size:11px; font-weight:700; letter-spacing:.15em; color:var(--red); text-transform:uppercase; margin-bottom:.5rem;">Apply</p>
+        <h2 style="font-family:'Noto Serif JP',serif; font-size:clamp(1.3rem,2.5vw,1.75rem); font-weight:600; line-height:1.4; margin-bottom:1rem;">まずはお気軽に<br>ご連絡ください</h2>
+        <p style="font-size:14px; color:var(--muted); line-height:1.9; margin-bottom:2rem;">「話を聞くだけ」でも大歓迎です。フォームからご連絡いただくか、直接お電話でもお気軽にどうぞ。採用担当よりご連絡いたします。</p>
+
+        <div style="background:var(--navy); color:var(--white); border-radius:var(--radius); padding:1.25rem 1.5rem; margin-bottom:1rem;">
+          <p style="font-size:11px; opacity:.6; margin-bottom:.25rem;">お電話でのお問い合わせ</p>
+          <a href="tel:044-000-0000" style="font-size:1.5rem; font-weight:700; letter-spacing:.05em; color:var(--white);">044-000-0000</a>
+          <p style="font-size:12px; opacity:.6; margin-top:.25rem;">受付時間：平日 9:00〜17:00</p>
+        </div>
+
+        <div style="background:var(--white); border:1px solid var(--gray-2); border-radius:var(--radius); padding:1rem 1.25rem;">
+          <p style="font-size:13px; color:var(--muted); line-height:1.8;">
+            📋 フォーム送信後、<strong>2〜3営業日以内</strong>に採用担当よりご連絡します。<br>
+            「まず話を聞いてみたい」という方も歓迎です。
+          </p>
+        </div>
+      </div>
+
+      <!-- 右：フォーム -->
+      <div style="background:var(--white); border:1px solid var(--gray-2); border-radius:12px; padding:2rem;">
+        <form id="recruit-form" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="name">お名前 <span class="form-required">必須</span></label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="山田 太郎" autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="kana">フリガナ <span class="form-required">必須</span></label>
+            <input class="form-input" type="text" id="kana" name="kana" placeholder="ヤマダ タロウ">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="age">年齢 <span class="form-required">必須</span></label>
+              <select class="form-input form-select" id="age" name="age">
+                <option value="">選択してください</option>
+                <option>20代</option>
+                <option>30代</option>
+                <option>40代</option>
+                <option>50代</option>
+                <option>60代以上</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="license">原付免許</label>
+              <select class="form-input form-select" id="license" name="license">
+                <option value="">選択してください</option>
+                <option>持っている</option>
+                <option>持っていない</option>
+                <option>取得予定</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="tel">電話番号 <span class="form-required">必須</span></label>
+            <input class="form-input" type="tel" id="tel" name="tel" placeholder="090-0000-0000" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">メールアドレス</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">希望営業所</label>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:4px;">
+              <label class="form-check"><input type="radio" name="shop" value="asao"> ASAあさお</label>
+              <label class="form-check"><input type="radio" name="shop" value="kakio"> ASA柿生</label>
+              <label class="form-check"><input type="radio" name="shop" value="shinyuri"> ASA新百合</label>
+              <label class="form-check"><input type="radio" name="shop" value="any"> どこでも可</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">ご質問・一言（任意）</label>
+            <textarea class="form-input form-textarea" id="message" name="message" placeholder="「まず話を聞いてみたい」「〇〇について教えてほしい」など、お気軽にどうぞ。"></textarea>
+          </div>
+
+          <div style="margin-bottom:1.25rem;">
+            <label class="form-check">
+              <input type="checkbox" id="privacy" name="privacy">
+              <span style="font-size:13px; color:var(--muted);"><a href="#" style="color:var(--red); text-decoration:underline;">プライバシーポリシー</a>に同意します</span>
+            </label>
+          </div>
+
+          <button type="button" class="form-submit" onclick="handleSubmit()">この内容で応募する</button>
+
+        </form>
+
+        <!-- 送信後メッセージ（非表示） -->
+        <div id="form-success" style="display:none; text-align:center; padding:2rem 0;">
+          <div style="width:56px; height:56px; background:var(--red-lt); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:.5rem;">ご応募ありがとうございます！</h3>
+          <p style="font-size:14px; color:var(--muted); line-height:1.8;">2〜3営業日以内に採用担当よりご連絡いたします。<br>しばらくお待ちください。</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2023 あかもと本舗</span>
+    <span>川崎市麻生区</span>
+  </div>
+</footer>
+
+<!-- フローティングCTA（スマホ用） -->
+<div class="floating-cta">
+  <a href="tel:044-000-0000" class="f-tel">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .91h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    電話で応募
+  </a>
+  <a href="#apply" class="f-apply">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    問い合わせる
+  </a>
+</div>
+
+<script>
+function handleSubmit() {
+  const name = document.getElementById('name').value.trim();
+  const tel  = document.getElementById('tel').value.trim();
+  const age  = document.getElementById('age').value;
+  const privacy = document.getElementById('privacy').checked;
+
+  if (!name) { alert('お名前を入力してください。'); return; }
+  if (!age)  { alert('年齢を選択してください。'); return; }
+  if (!tel)  { alert('電話番号を入力してください。'); return; }
+  if (!privacy) { alert('プライバシーポリシーへの同意が必要です。'); return; }
+
+  document.getElementById('recruit-form').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+  document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+</body>
+</html>
