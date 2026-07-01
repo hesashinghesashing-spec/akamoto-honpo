@@ -93,7 +93,7 @@
   .header-tel svg { flex-shrink: 0; }
 
   /* ── ヒーロー ── */
-  .hero {
+  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(26,42,58,0.65); z-index: 0; } .hero-inner, .hero-content, .hero-visual { position: relative; z-index: 1; } .hero { background-image: url("akamoto_TOP.png"); background-size: cover; background-position: center; position: relative;
     background: var(--navy);
     color: var(--white);
     padding: 4rem 1.5rem;
